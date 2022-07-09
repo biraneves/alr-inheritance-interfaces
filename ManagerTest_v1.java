@@ -2,10 +2,7 @@ class ManagerTest {
 
     public static void main(String[] args) {
         
-        Manager m1 = new Manager();
-        m1.setName("Marco");
-        m1.setId("987.654.321-01");
-        m1.setSalary(5000.0);
+        Manager m1 = new Manager("Marco", "987.654.321-01", 5000.0);
 
         System.out.println(m1.getName());
         System.out.println(m1.getId());

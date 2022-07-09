@@ -80,4 +80,13 @@ public abstract class Account {
 
     }
 
+    public String toString() {
+
+        String s = "Customer: " + accountHolder.getName() + " - Agency: " + agency +
+            " - Acc. number: " + number;
+
+        return s;
+
+    }
+
 }

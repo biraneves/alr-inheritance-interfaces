@@ -6,6 +6,14 @@ public abstract class Employee {
 
     public abstract double getBonus();
 
+    public Employee(String name, String id, double salary) {
+
+        this.name = name;
+        this.id = id;
+        this.salary = (salary > 0 ? salary : 0.0);
+
+    }
+
     public String getName() {
 
         return name;
@@ -21,12 +29,6 @@ public abstract class Employee {
     public String getId() {
 
         return id;
-
-    }
-
-    public void setId(String id) {
-
-        this.id = id;
 
     }
 

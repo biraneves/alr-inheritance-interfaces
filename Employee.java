@@ -1,8 +1,10 @@
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private String id;
     private double salary;
+
+    public abstract double getBonus();
 
     public String getName() {
 
@@ -37,12 +39,6 @@ public class Employee {
     public void setSalary(double salary) {
 
         this.salary = salary;
-
-    }
-
-    public double getBonus() {
-
-        return salary * 0.05;
 
     }
 

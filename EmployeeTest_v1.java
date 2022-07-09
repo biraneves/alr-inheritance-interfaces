@@ -2,7 +2,7 @@ class EmployeeTest {
 
     public static void main(String[] args) {
         
-        Employee nico = new Employee();
+        Employee nico = new Manager();
         nico.setName("Nico Steppat");
         nico.setId("123.456.789-10");
         nico.setSalary(2600.00);

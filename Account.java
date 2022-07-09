@@ -6,12 +6,13 @@ public abstract class Account {
     private Customer accountHolder;
     private static int total = 0;
 
-    public Account(int agency, int number) {
+    public Account(int agency, int number, Customer accountHolder) {
 
         Account.total++;
 
         this.agency = agency;
         this.number = number;
+        this.accountHolder = accountHolder;
         this.balance = 0;
 
     }

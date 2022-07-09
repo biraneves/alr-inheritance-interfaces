@@ -1,6 +1,6 @@
 public abstract class Account {
 
-    private double balance;
+    protected double balance;
     private int agency;
     private int number;
     private Customer accountHolder;
@@ -17,12 +17,7 @@ public abstract class Account {
 
     }
 
-    public void deposit(double amount) {
-
-        if (amount > 0)
-            balance += amount;
-
-    }
+    public abstract void deposit(double amount);
 
     public boolean withdraw(double amount) {
 

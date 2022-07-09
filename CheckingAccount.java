@@ -15,4 +15,11 @@ public class CheckingAccount extends Account {
 
     }
 
+    public void deposit(double amount) {
+
+        if (amount > 0)
+            super.balance += amount;
+
+    }
+
 }

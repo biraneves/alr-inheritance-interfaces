@@ -50,4 +50,12 @@ public class Customer {
 
     }
 
+    public String toString() {
+
+        String s = name + " (" + id + ")";
+
+        return s;
+
+    }
+
 }

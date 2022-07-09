@@ -2,10 +2,7 @@ class EmployeeTest {
 
     public static void main(String[] args) {
         
-        Employee nico = new Manager();
-        nico.setName("Nico Steppat");
-        nico.setId("123.456.789-10");
-        nico.setSalary(2600.00);
+        Employee nico = new Manager("Nico Steppat", "123.456.789-10", 5000.0);
 
         System.out.println(nico.getName());
         System.out.println(nico.getBonus());

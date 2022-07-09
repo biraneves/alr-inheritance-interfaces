@@ -1,25 +1,25 @@
-public class Manager extends Employee {
+public class Manager extends Employee implements Authenticable {
 
-    private int password;
+    private AuthenticationUtil authenticator;
 
     public Manager(String name, String id, double salary) {
 
         super(name, id, salary);
+        this.authenticator = new AuthenticationUtil();
 
     }
 
+    @Override
     public boolean authenticate(int password) {
 
-        if (this.password == password)
-            return true;
-        
-        return false;
+        return this.authenticator.authenticate(password);
 
     }
 
+    @Override
     public void setPassword(int password) {
 
-        this.password = password;
+        this.authenticator.setPassword(password);
 
     }
 

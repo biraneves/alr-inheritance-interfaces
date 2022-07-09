@@ -1,4 +1,4 @@
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account implements Taxable {
 
     public CheckingAccount(int agency, int number, Customer accountHolder) {
 
@@ -19,6 +19,13 @@ public class CheckingAccount extends Account {
 
         if (amount > 0)
             super.balance += amount;
+
+    }
+
+    @Override
+    public double getTaxValue() {
+
+        return super.balance * 0.01;
 
     }
 

@@ -1,12 +1,15 @@
-public class Customer {
+public class Customer implements Authenticable {
 
     private String name;
     private String id;
     private String profession;
+    private AuthenticationUtil authenticator;
     private static int total = 0;
 
     public Customer(String name, String id, String profession) {
 
+        this.authenticator = new AuthenticationUtil();
+        
         Customer.total++;
         this.name = name;
         this.id = id;
@@ -55,6 +58,20 @@ public class Customer {
         String s = name + " (" + id + ")";
 
         return s;
+
+    }
+
+    @Override
+    public void setPassword(int password) {
+
+        this.authenticator.setPassword(password);
+
+    }
+
+    @Override
+    public boolean authenticate(int password) {
+
+        return this.authenticator.authenticate(password);
 
     }
 

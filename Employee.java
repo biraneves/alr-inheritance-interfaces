@@ -42,7 +42,7 @@ public class Employee {
 
     public double getBonus() {
 
-        return salary * 0.1;
+        return salary * 0.05;
 
     }
 

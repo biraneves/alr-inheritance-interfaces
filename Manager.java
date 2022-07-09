@@ -2,6 +2,12 @@ public class Manager extends Employee {
 
     private int password;
 
+    public Manager(String name, String id, double salary) {
+
+        super(name, id, salary);
+
+    }
+
     public boolean authenticate(int password) {
 
         if (this.password == password)
